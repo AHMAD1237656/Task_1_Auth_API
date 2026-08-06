@@ -2,7 +2,26 @@ from rest_framework import generics, status
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from .permissions import IsAdmin
+# from django.http import JsonResponse
 
+# def home(request):
+#     return JsonResponse({
+#         "status": "success",
+#         "message": "Authentication API is Live 🚀",
+#         "developer": "M Ahmad",
+#         "version": "1.0.0",
+#         "documentation": "/api/docs/",
+#         "schema": "/api/schema/",
+#     })
+from django.http import JsonResponse
+
+def home(request):
+    return JsonResponse({
+        "status": "success",
+        "message": "Authentication API is Live 🚀",
+        "developer": "M Ahmad",
+        "version": "1.0.0",
+    })
 from .models import User
 
 from .serializers import (
